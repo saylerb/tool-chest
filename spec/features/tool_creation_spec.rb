@@ -15,7 +15,6 @@ RSpec.feature "Tool management", type: :feature do
     expect(current_path).to eq( tool_path(Tool.last.id) )
     # check and make sure all the attributes I filled in and submitted are displaying on the page 
 
-    save_and_open_page
     within(".tool_info li:nth-child(1)") do
       expect(page).to have_content("Screwdriver")
     end
